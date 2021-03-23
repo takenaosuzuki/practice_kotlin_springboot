@@ -2,13 +2,13 @@ package com.example.demo.model
 
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
-import javax.persistence.GeneratedType
+import javax.persistence.GenerationType
 import javax.persistence.Id
-import javax.validation.constaraints.NotBlank
+import javax.validation.constraints.NotBlank
 
 @Entity
 data class User (
-    @Id @GenaratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
 
     @get: NotBlank
